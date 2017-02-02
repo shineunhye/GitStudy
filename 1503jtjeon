@@ -1,0 +1,46 @@
+package com.sist;
+
+import java.util.Scanner;
+
+public class Quiz1501 {
+
+	public static void main(String[] args) {
+		/*
+		 * int[][] arr = { { 1, 2, 3, }, { 4, 5, 6, }, { 7, 8, 9 } };
+		 * 
+		 * for (int i = 0; i < arr.length; i++) { for (int j = 0; j <
+		 * arr.length; j++) { System.out.print(arr[i][j] + " "); }
+		 * System.out.println(); }
+		 * 
+		 * for (int i = 0; i < arr.length; i++) { for (int j = 0; j <
+		 * arr.length; j++) { System.out.print(arr[j][i] + " "); }
+		 * System.out.println(); }
+		 */
+		Scanner scan = new Scanner(System.in);
+		int point = 1;
+		int cm = scan.nextInt();
+		int[][] arr2 = new int[cm][cm];
+		for (int i = 0; i < arr2.length; i++) {
+			if (i % 2 == 0) {
+				for (int j = 0; j < arr2.length; j++) {
+					arr2[i][j] = point;
+					point++;
+					System.out.print(arr2[i][j] + " ");
+				}
+			} else {
+				for (int j = arr2.length-1; j >=0; j--) {
+//					System.out.println("i값:"+i+"j값:"+j);
+//					System.out.println();
+					arr2[i][j] = point;
+					point++;
+				}
+				for(int k=0;k<arr2.length;k++){
+					System.out.print(arr2[i][k] + " ");
+				}
+			}
+			System.out.println();
+		}
+
+	}
+
+}
